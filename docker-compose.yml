@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  vm:
+    image: tensorflow/tensorflow
+    platform: "linux/amd64"
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/code
+    working_dir: /code
+    command: tail -F ./tmp
